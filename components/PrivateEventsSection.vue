@@ -14,13 +14,13 @@
           <h2 class="text-2xl md:text-3xl font-bold mb-4">
             Celebra tu evento<br />privado en Room
           </h2>
-          <Button variant="destructive" size="lg">Organiza tu evento</Button>
+          <UiButton variant="destructive" size="lg"
+            >Organiza tu evento</UiButton
+          >
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-import { Button } from "@/components/ui/button";
-</script>
+<script setup lang="ts"></script>

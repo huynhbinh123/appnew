@@ -21,16 +21,16 @@
       <div
         class="flex flex-col md:flex-row items-center justify-center gap-4 mb-16"
       >
-        <Button variant="destructive" size="lg" class="w-full md:w-auto">
+        <UiButton variant="destructive" size="lg" class="w-full md:w-auto">
           ENTRADAS, VIPS & LISTAS
-        </Button>
-        <Button
+        </UiButton>
+        <UiButton
           variant="outline"
           size="lg"
           class="w-full md:w-auto border-white text-white hover:text-white"
         >
           EVENTOS PRIVADOS
-        </Button>
+        </UiButton>
       </div>
 
       <a href="#events" class="inline-block animate-bounce">
@@ -41,6 +41,5 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-vue-next";
 </script>

@@ -22,21 +22,18 @@
     </div>
 
     <div class="mt-auto p-3 bg-black">
-      <Button
+      <UiButton
         variant="destructive"
         class="w-full text-xs"
         @click="navigateToEvent"
       >
         Entradas y reservas
-      </Button>
+      </UiButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
-import { useRouter } from "vue-router";
-
 interface Event {
   date: string;
   time: string;
