@@ -18,11 +18,8 @@
         <span style="color: #c60200">próximos eventos</span>
       </h1>
 
-      <a
-        href="#algo"
-        class="p-3 border-2 rounded-full cursor-pointer w-14 h-14 flex items-center justify-center"
-      >
-        <Icon name="fa-solid:arrow-down" class="p-2" width="10" height="10" />
+      <a href="#algo" class="inline-block animate-bounce">
+        <ChevronDown class="h-8 w-8" />
       </a>
     </div>
 
@@ -73,3 +70,7 @@
     <SiteFooter />
   </div>
 </template>
+
+<script setup lang="ts">
+import { ChevronDown } from "lucide-vue-next";
+</script>
