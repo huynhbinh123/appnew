@@ -9,7 +9,7 @@
     </div>
 
     <div class="relative">
-      <img
+      <NuxtImg
         :src="event.image"
         :alt="event.title"
         class="w-full h-64 object-cover"

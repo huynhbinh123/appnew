@@ -4,7 +4,7 @@
   >
     <!-- Background image -->
     <div class="absolute inset-0 z-0">
-      <img
+      <NuxtImg
         src="https://roomclub.es/wp-content/uploads/2024/12/355435266_2426284420878268_5200076589570081586_n-1.png"
         alt="Room Club background"
         class="w-full h-full object-cover"
@@ -34,12 +34,13 @@
       </div>
 
       <a href="#events" class="inline-block animate-bounce">
-        <ChevronDown class="h-8 w-8" />
+        <Icon
+          name="material-symbols:arrow-cool-down"
+          class="size-8 text-white"
+        />
       </a>
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-import { ChevronDown } from "lucide-vue-next";
-</script>
+<script setup lang="ts"></script>

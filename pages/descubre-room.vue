@@ -1,7 +1,7 @@
 <template>
   <div class="absolute inset-0 z-0">
-    <img
-      src="https://roomclub.es/wp-content/uploads/2024/12/355435266_2426284420878268_5200076589570081586_n-1.png"
+    <NuxtImg
+      src="~/assets/img/banner_descubre.jpg"
       alt="Room Club background"
       class="w-full h-full object-cover"
     />
@@ -20,7 +20,10 @@
       </h1>
 
       <a href="#algo" class="inline-block animate-bounce">
-        <ChevronDown class="h-8 w-8" />
+        <Icon
+          name="material-symbols:arrow-cool-down"
+          class="size-8 text-white"
+        />
       </a>
     </div>
 
@@ -50,7 +53,11 @@
     </div>
 
     <div class="bg-black">
-      <img src="/assets/img/Galeria-Descubre-Room1.png" alt="" class="w-full" />
+      <NuxtImg
+        src="/assets/img/Galeria-Descubre-Room1.png"
+        alt=""
+        class="w-full"
+      />
     </div>
 
     <div class="bg-black flex justify-center items-center flex-col py-[90px]">
@@ -103,7 +110,7 @@
     <div class="bg-black flex justify-center items-center py-4">
       <h3 class="text-3xl mb-1">DESCUBRE</h3>
       <a href="https://cosmicgroup.es/en/">
-        <img src="assets/img/cosmic.png" alt="" class="w-[153px]" />
+        <NuxtImg src="assets/img/cosmic.png" alt="" class="w-[153px]" />
       </a>
     </div>
 
@@ -112,5 +119,12 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronDown } from "lucide-vue-next";
+useSeoMeta({
+  title: "Descubre Room Page",
+  ogTitle: "Descubre Room Page",
+  description: "This is my amazing site, let me tell you all about it.",
+  ogDescription: "This is my amazing site, let me tell you all about it.",
+  ogImage: "https://example.com/image.png",
+  twitterCard: "summary_large_image",
+});
 </script>

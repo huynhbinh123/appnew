@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div class="relative">
-          <img
+          <NuxtImg
             src="https://roomclub.es/wp-content/uploads/2024/12/Galeria-Bandido-1024x509.png"
             alt="Private event at Room"
             class="w-full h-[400px] object-cover"

@@ -1,6 +1,6 @@
 <template>
   <div class="absolute inset-0 z-0">
-    <img
+    <NuxtImg
       src="https://roomclub.es/wp-content/uploads/2024/12/355435266_2426284420878268_5200076589570081586_n-1.png"
       alt="Room Club background"
       class="w-full h-full object-cover"
@@ -63,7 +63,7 @@
     <div class="bg-black flex justify-center items-center py-4">
       <h3 class="text-3xl mb-1">DESCUBRE</h3>
       <a href="https://cosmicgroup.es/en/">
-        <img src="assets/img/cosmic.png" alt="" class="w-[153px]" />
+        <NuxtImg src="assets/img/cosmic.png" alt="" class="w-[153px]" />
       </a>
     </div>
 
@@ -72,5 +72,12 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronDown } from "lucide-vue-next";
+useSeoMeta({
+  title: "Entradas Room Page",
+  ogTitle: "Entradas Room Page",
+  description: "This is my amazing site, let me tell you all about it.",
+  ogDescription: "This is my amazing site, let me tell you all about it.",
+  ogImage: "https://example.com/image.png",
+  twitterCard: "summary_large_image",
+});
 </script>

@@ -2,7 +2,7 @@
   <div class="pt-16">
     <!-- Hero Banner -->
     <div class="relative h-[50vh] md:h-[60vh]">
-      <img
+      <NuxtImg
         :src="event.image"
         :alt="event.title"
         class="w-full h-full object-cover"
@@ -26,15 +26,22 @@
 
             <div class="flex flex-col md:flex-row md:items-center mb-6 gap-4">
               <div class="flex items-center">
-                <CalendarIcon class="h-5 w-5 mr-2 text-red-600" />
+                <Icon
+                  name="fa6-solid:calendar-check"
+                  class="h-5 w-5 mr-2 text-red-600"
+                />
                 <span>{{ event.date }}</span>
               </div>
               <div class="flex items-center">
-                <ClockIcon class="h-5 w-5 mr-2 text-red-600" />
+                <Icon fa6-solid:clock class="h-5 w-5 mr-2 text-red-600" />
                 <span>{{ event.time }}</span>
               </div>
               <div class="flex items-center">
-                <UserIcon class="h-5 w-5 mr-2 text-red-600" />
+                <Icon
+                  name="fa6-solid:circle-user"
+                  fa6-solid:clock
+                  class="h-5 w-5 mr-2 text-red-600"
+                />
                 <span>{{ event.age }}</span>
               </div>
             </div>
@@ -67,17 +74,17 @@
           <div class="bg-zinc-900 rounded-lg p-6 mb-8">
             <h2 class="text-2xl font-bold mb-4">Galería</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <img
+              <NuxtImg
                 src="https://roomclub.es/wp-content/uploads/2024/08/Foto-Landing-Inicio-9-3.png"
                 alt="Room Club event"
                 class="w-full h-40 object-cover rounded-md"
               />
-              <img
+              <NuxtImg
                 src="https://roomclub.es/wp-content/uploads/2024/12/Galeria-Bandido-1024x509.png"
                 alt="Room Club event"
                 class="w-full h-40 object-cover rounded-md"
               />
-              <img
+              <NuxtImg
                 src="https://roomclub.es/wp-content/uploads/2024/08/Foto-Landing-Inicio-9-2.png"
                 alt="Room Club event"
                 class="w-full h-40 object-cover rounded-md"
@@ -91,7 +98,7 @@
             <div class="aspect-video bg-zinc-800 rounded-md mb-4">
               <!-- Placeholder for map -->
               <div class="w-full h-full flex items-center justify-center">
-                <MapPinIcon class="h-12 w-12 text-red-600" />
+                <Icon name="fa6-solid:map-pin" class="h-12 w-12 text-red-600" />
               </div>
             </div>
             <p class="text-gray-300">
@@ -147,16 +154,23 @@
             <h2 class="text-2xl font-bold mb-4">Información</h2>
             <div class="space-y-3">
               <div class="flex items-center">
-                <PhoneIcon class="h-5 w-5 mr-2 text-red-600" />
+                <Icon
+                  name="fa6-solid:phone"
+                  class="h-5 w-5 mr-2 text-red-600"
+                />
                 <span>+34 655 76 75 74</span>
               </div>
               <div class="flex items-center">
-                <MailIcon class="h-5 w-5 mr-2 text-red-600" />
-                <span>info@roomclub.es</span>
+                <Icon
+                  name="fa6-solid:envelope"
+                  class="h-5 w-5 mr-2 text-red-600"
+                />
               </div>
               <div class="flex items-center">
-                <InstagramIcon class="h-5 w-5 mr-2 text-red-600" />
-                <span>@roomclubvalencia</span>
+                <Icon
+                  name="fa6-brands:instagram"
+                  class="h-5 w-5 mr-2 text-red-600"
+                />
               </div>
             </div>
           </div>
@@ -179,20 +193,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import { useRoute } from "vue-router";
-import { Button } from "@/components/ui/button";
-import EventCard from "@/components/EventCard.vue";
-import {
-  Calendar as CalendarIcon,
-  Clock as ClockIcon,
-  User as UserIcon,
-  MapPin as MapPinIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  Instagram as InstagramIcon,
-} from "lucide-vue-next";
-
+useSeoMeta({
+  title: "=Event Details Page",
+  ogTitle: "=Event Details Page",
+  description: "This is my amazing site, let me tell you all about it.",
+  ogDescription: "This is my amazing site, let me tell you all about it.",
+  ogImage: "https://example.com/image.png",
+  twitterCard: "summary_large_image",
+});
 const route = useRoute();
 const eventId = computed(() => route.params.id);
 

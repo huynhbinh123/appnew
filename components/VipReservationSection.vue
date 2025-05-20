@@ -10,7 +10,7 @@
         </div>
 
         <div class="relative order-1 md:order-2">
-          <img
+          <NuxtImg
             src="https://roomclub.es/wp-content/uploads/2024/08/Foto-Landing-Inicio-9-3.png"
             alt="VIP table at Room"
             class="w-full h-[400px] object-cover rounded-lg"

@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
-  components: true
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxt/image'],
+  components: true,
+  app: {
+    head: {
+      title: 'Discoteca Room Valencia | Grupo Cosmit'
+    } 
+  }
 })
